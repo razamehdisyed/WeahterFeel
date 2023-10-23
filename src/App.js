@@ -25,8 +25,19 @@ function App() {
     fetchWeather()
   }, [query, units])
 
+
+  const formatBackground = () => {
+    if (!weather) return "from-cyan-600 to-blue-700"
+    const threshold = units === "metric" ? 20:60
+    if (weather.temp <threshold) return "from-cyan-600 to-blue-700"
+    if (weather.details === 'Clouds') return "from-gray-400 to-blue-500"
+    if (weather.details === 'Haze') return "from-gray-800 to-black-800"
+
+    return "from-yellow-600 to-orange-800"
+  }
+
   return (
-    <div className="mx-auto max-w-screen-md mt-4 py-6 px-32 bg-gradient-to-br from bg-cyan-600 to to-blue-700 h-fit shadow-xl shadow-gray-400">
+    <div className={` mx-auto max-w-screen-md mt-4 py-6 px-32 bg-gradient-to-br h-fit shadow-xl shadow-gray-200 ${formatBackground()}`}>
     <TopButtons setQuery = {setQuery}/>
     <Inputs setQuery={setQuery} units = {units} setUnits = {setUnits} />
 
