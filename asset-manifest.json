@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/weatherfeel/static/css/main.e9213758.css",
+    "main.js": "/weatherfeel/static/js/main.81208f20.js",
+    "index.html": "/weatherfeel/index.html",
+    "main.e9213758.css.map": "/weatherfeel/static/css/main.e9213758.css.map",
+    "main.81208f20.js.map": "/weatherfeel/static/js/main.81208f20.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e9213758.css",
+    "static/js/main.81208f20.js"
+  ]
+}
